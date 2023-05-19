@@ -1,0 +1,46 @@
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    {% include 'cdnlines.html' %}
+    <title></title>
+  </head>
+  <style media="screen">
+    form{
+      padding: 10px;
+      border-radius: 5%;
+      box-shadow: 0px 0px 5px red, 0px 0px 10px blue;
+    }
+    input[name]{
+      margin-top: -10px;
+    }
+    input[value]{
+      margin-top: 10px;
+    }
+  </style>
+  <body>
+    <div class="container-fluid">
+      <div class="row">
+          <div class="offset-md-4 col-md-4">
+            <form method="POST" class="mt-4">
+              {% csrf_token %}
+              <h3 class="text-center">Enter Your Data Here!!!</h3>
+              <label>First Name:</label>
+              <input type="text" class="form-control" name="fName">
+              <label>Last Name:</label>
+              <input type="text" class="form-control" name="lName">
+              <label>Email ID:</label>
+              <input type="email" class="form-control" name="email">
+              <label>Mobile:</label>
+              <input type="number" class="form-control" name="mobile">
+              <label>Location:</label>
+              <input type="text" class="form-control" name="location">
+              <center>
+              <input type="submit" value="Submit" class="btn-outline-success btn btn-sm">
+              <input type="reset" value="Clear" class="btn-outline-danger btn btn-sm">
+              </center>
+            </form>
+          </div>
+      </div>
+    </div>
+  </body>
+</html>
